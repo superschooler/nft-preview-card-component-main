@@ -1,0 +1,145 @@
+:root {
+  --text: hsl(215, 51%, 70%);
+  --accent: hsl(178, 100%, 50%);
+  --background: hsl(217, 54%, 11%);
+  --card: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --heading: hsl(0, 0%, 100%);
+}
+
+* {
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 17.5em;
+  max-width: 70vw;
+  margin: 1.5em auto;
+  padding: 1.5em;
+  border-radius: 1em;
+  background-color: var(--card);
+}
+
+h1 {
+  color: var(--heading);
+  font-size: 1.5rem;
+  margin-top: 1em;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.description {
+  margin-top: 1em;
+  line-height: 1.75em;
+}
+
+.image-box {
+  width: 100%;
+  position: relative;
+}
+
+.nft-image {
+  width: 100%;
+  border-radius: 0.5em;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 247, 0.4);
+  border-radius: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.image-overlay:hover {
+  opacity: 1;
+}
+
+.view-icon {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.image-overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+
+.image-overlay:hover > * {
+  transform: translateY(0);
+}
+
+.sale {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-block,
+.time-block {
+  display: flex;
+  align-items: center;
+  margin-top: -0.75em;
+}
+
+.price-block img {
+  height: 1.4em;
+  width: 0.7em;
+  margin-right: 0.5em;
+}
+
+.price {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.time-block img {
+  height: 1.125em;
+  width: 1.125em;
+  margin-right: 0.5em;
+}
+
+.divider {
+  border: 0.5px solid var(--line);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  padding-top: 0.5em;
+}
+
+footer img {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  border: 1.75px solid var(--heading);
+  margin-right: 1em;
+}
+
+footer a {
+  color: var(--heading);
+  text-decoration: none;
+}
+
+h1:hover,
+footer a:hover {
+  color: var(--accent);
+}
